@@ -2,4 +2,29 @@
 
 The idea presented in this paper is rather simple, but it requires somewhat
 sophisticated background knowledge. This chapter serves to provide said
-background knowledge.
+background knowledge. It is assumed the reader is familiar with the basic
+concepts in computer programming, and has at least some experience in an
+imperative programming language, such as C, C++, Python, or Java.
+
+\section{Functional languages}
+
+Functional programming languages are programming languages that treat functions
+as first-class values. In most programming languages, there's a rather sharp
+distinction between data, and code that modifies the data. In functional
+programming languages, that distinction is somewhat blurred.
+
+\begin{example}[Factorial function]
+  Recall the familiar factorial function in mathematics:
+
+  \begin{rclmath}
+    ! & : & \N \to \N \\
+    0! & = & 1 \\
+    n! & = & n \cdot (n - 1)! \\
+  \end{rclmath}
+  
+  \lstinputlisting[caption={Factorial function in C}, language=C, firstline=3, lastline=14]{code/factorial.c}
+
+  In Idris, a functional language, this is the factorial function:
+
+  \lstinputlisting[caption={Factorial function in Idris}, firstline=3, lastline=5]{code/factorial.idr}
+\end{example}

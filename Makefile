@@ -5,6 +5,8 @@ all:
 	  cp -rv \
 	    research.* \
 	    chapters \
+	    code \
+	    tex/latex-solarized/* \
 	    ${BUILDDIR} && \
 	  cd ${BUILDDIR} && \
 	  latexmk -pdf research.tex && \
