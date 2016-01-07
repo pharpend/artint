@@ -1,0 +1,28 @@
+\documentclass[12pt,letterpaper,onepage]{memoir}
+
+\usepackage[american]{babel}
+\usepackage[urldate=iso8601,date=iso8601]{biblatex}
+\usepackage{datetime2}
+\usepackage{newtxmath,newtxtext}
+\usepackage{url}
+
+\usepackage[hidelinks]{hyperref}
+\usepackage{cleveref}
+
+\addbibresource{research.bib}
+\DTMsetstyle{iso}
+
+\newcommand{\code}[1]{\texttt{#1}}
+\newcommand{\email}[1]{\href{mailto:#1}{\code{<#1>}}}
+\newcommand{\person}[2]{#1 \email{#2}}
+\newcommand{\pharpend}{\person{Peter Robert Harpending}{u0284592@utah.edu}}
+
+\begin{document}
+\title{Artificial Intuition via Graph Traversal over Algebraic-Structural
+  Representations of Logical Implication}
+\author{\pharpend}
+\date{\Today}
+\maketitle
+
+\printbibliography
+\end{document}
