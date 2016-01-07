@@ -3,26 +3,44 @@
 \usepackage[american]{babel}
 \usepackage[urldate=iso8601,date=iso8601]{biblatex}
 \usepackage{datetime2}
-\usepackage{newtxmath,newtxtext}
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage{tabu}
 \usepackage{url}
 
-\usepackage[hidelinks]{hyperref}
+\usepackage{hyperref}
 \usepackage{cleveref}
-
-\addbibresource{research.bib}
-\DTMsetstyle{iso}
 
 \newcommand{\code}[1]{\texttt{#1}}
 \newcommand{\email}[1]{\href{mailto:#1}{\code{<#1>}}}
 \newcommand{\person}[2]{#1 \email{#2}}
 \newcommand{\pharpend}{\person{Peter Robert Harpending}{u0284592@utah.edu}}
+\newcommand{\answergraph}[1]{\begin{center}\includegraphics[width=0.8\textwidth]{#1}\end{center}}
+
+\newenvironment{cpn}
+  {\begin{flushleft}\hrulefill\par\setlength{\parskip}{2ex}}
+  {\par\hrulefill\end{flushleft}}
+
+\addbibresource{research.bib}
+\nocite{*}
+\DTMsetstyle{iso}
 
 \begin{document}
 \title{Artificial Intuition via Graph Traversal over Algebraic-Structural
   Representations of Logical Implication}
 \author{\pharpend}
-\date{\Today}
 \maketitle
+
+\begin{cpn}
+  Copyright \copyright\ 2016, \pharpend
+
+  This work is licensed under the Creative Commons Attribution 4.0 International
+  License. To view a copy of this license, visit
+  \url{http://creativecommons.org/licenses/by/4.0/} or send a letter to Creative
+  Commons, PO Box 1866, Mountain View, CA 94042, USA.
+\end{cpn}
+
+\tableofcontents
 
 \printbibliography
 \end{document}
