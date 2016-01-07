@@ -1,5 +1,6 @@
 \documentclass[12pt,letterpaper,onepage]{memoir}
 
+% Imports
 \usepackage[american]{babel}
 \usepackage[urldate=iso8601,date=iso8601]{biblatex}
 \usepackage{datetime2}
@@ -7,24 +8,28 @@
 \usepackage[utf8]{inputenc}
 \usepackage{tabu}
 \usepackage{url}
+\usepackage{hyperref}           %Needs to be imported last
+\usepackage{cleveref}           %Needs to be imported laster
 
-\usepackage{hyperref}
-\usepackage{cleveref}
-
+% New Commands
 \newcommand{\code}[1]{\texttt{#1}}
 \newcommand{\email}[1]{\href{mailto:#1}{\code{<#1>}}}
 \newcommand{\person}[2]{#1 \email{#2}}
 \newcommand{\pharpend}{\person{Peter Robert Harpending}{u0284592@utah.edu}}
 \newcommand{\answergraph}[1]{\begin{center}\includegraphics[width=0.8\textwidth]{#1}\end{center}}
 
+% New Environments
 \newenvironment{cpn}
   {\begin{flushleft}\hrulefill\par\setlength{\parskip}{2ex}}
   {\par\hrulefill\end{flushleft}}
 
+% Extraneous setup
 \addbibresource{research.bib}
-\nocite{*}
+\chapterstyle{bianchi}
 \DTMsetstyle{iso}
+\nocite{*}
 
+% Actual document
 \begin{document}
 \title{Artificial Intuition via Graph Traversal over Algebraic-Structural
   Representations of Logical Implication}
@@ -41,6 +46,8 @@
 \end{cpn}
 
 \tableofcontents
+
+\input{chapters/1-intro.tex}
 
 \printbibliography
 \end{document}
