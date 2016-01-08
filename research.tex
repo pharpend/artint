@@ -1,6 +1,7 @@
 \documentclass[12pt,letterpaper,oneside]{memoir}
 
 % Imports
+\usepackage{amsfonts}
 \usepackage{amsmath}
 \usepackage{amsthm}
 \usepackage[american]{babel}
@@ -9,17 +10,20 @@
 \usepackage{datetime2}
 \usepackage{graphicx}
 \usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{FiraMono}
 \usepackage{listings}
-\usepackage{newtxtext,newtxmath}
+% \usepackage{newtxtext,newtxmath}
 \usepackage{solarized-light}
 % \usepackage{stackrel}
 \usepackage{tabu}
 \usepackage{url}
-\usepackage{hyperref}           %Needs to be imported last
-\usepackage{cleveref}           %Needs to be imported laster
+\usepackage[hidelinks]{hyperref}           %Needs to be imported last
+\usepackage{cleveref}                      %Needs to be imported laster
 
 % New Commands
-\newcommand{\code}[1]{\texttt{#1}}
+\newcommand{\code}[1]{\texttt{\footnotesize #1}}
+\newcommand{\btrurl}[1]{{\footnotesize \url{#1}}}
 \newcommand{\email}[1]{\href{mailto:#1}{\code{<#1>}}}
 \newcommand{\person}[2]{#1 \email{#2}}
 \newcommand{\pharpend}{\person{Peter Robert Harpending}{u0284592@utah.edu}}
@@ -43,6 +47,7 @@
 
 % Extraneous setup
 \addbibresource{research.bib}
+\chapterstyle{article}
 \DTMsetstyle{iso}
 \nocite{*}
 
@@ -92,8 +97,8 @@
 
   This work is licensed under the Creative Commons Attribution 4.0 International
   License. To view a copy of this license, visit
-  \url{http://creativecommons.org/licenses/by/4.0/} or send a letter to Creative
-  Commons, PO Box 1866, Mountain View, CA 94042, USA.
+  \btrurl{http://creativecommons.org/licenses/by/4.0/} or send a letter to
+  Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
 \end{cpn}
 
 \tableofcontents
